@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "rq4/fwjlUow=",
   "success": true,
   "projectFilePath": "C:\\Users\\124111508\\Documents\\QBank\\QBank.csproj",
+=======
+  "dgSpecHash": "hmRvhoes4+A=",
+  "success": true,
+  "projectFilePath": "/Users/robertocampos/Desktop/QBank-2/QBank.csproj",
+>>>>>>> 0102e89e8b053b3b98a2d45398d9841fbbcc6f29
   "expectedPackageFiles": [],
   "logs": []
 }

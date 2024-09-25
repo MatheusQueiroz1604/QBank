@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QBank")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91349bd0d7e83827f7f77262199e2380069fe4b2")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c2917cb5c8fee5218d7773a264fd8150f2150db")]
+>>>>>>> 0102e89e8b053b3b98a2d45398d9841fbbcc6f29
 [assembly: System.Reflection.AssemblyProductAttribute("QBank")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QBank")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
