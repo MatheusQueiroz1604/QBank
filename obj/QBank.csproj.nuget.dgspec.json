@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\12315538\\QBank\\QBank.csproj": {}
+    "C:\\Users\\124111508\\Documents\\QBank\\QBank.csproj": {}
   },
   "projects": {
-    "C:\\Users\\12315538\\QBank\\QBank.csproj": {
+    "C:\\Users\\124111508\\Documents\\QBank\\QBank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\12315538\\QBank\\QBank.csproj",
+        "projectUniqueName": "C:\\Users\\124111508\\Documents\\QBank\\QBank.csproj",
         "projectName": "QBank",
-        "projectPath": "C:\\Users\\12315538\\QBank\\QBank.csproj",
-        "packagesPath": "C:\\Users\\12315538\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\12315538\\QBank\\obj\\",
+        "projectPath": "C:\\Users\\124111508\\Documents\\QBank\\QBank.csproj",
+        "packagesPath": "C:\\Users\\124111508\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\124111508\\Documents\\QBank\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\12315538\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\124111508\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
