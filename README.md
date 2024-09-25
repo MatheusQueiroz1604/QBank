@@ -1,6 +1,6 @@
 # QBank
 
-Integrantes do Grupo
+# Integrantes do Grupo
 - Augusto Dias Moura Macedo
 - Gabriel Campello Penna
 - Isac Erik Tomaz
