@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\12315538\\.nuget\\packages\\": {}
+    "/Users/robertocampos/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\12315538\\QBank\\QBank.csproj",
+      "projectUniqueName": "/Users/robertocampos/Desktop/QBank-2/QBank.csproj",
       "projectName": "QBank",
-      "projectPath": "C:\\Users\\12315538\\QBank\\QBank.csproj",
-      "packagesPath": "C:\\Users\\12315538\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\12315538\\QBank\\obj\\",
+      "projectPath": "/Users/robertocampos/Desktop/QBank-2/QBank.csproj",
+      "packagesPath": "/Users/robertocampos/.nuget/packages/",
+      "outputPath": "/Users/robertocampos/Desktop/QBank-2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\12315538\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/robertocampos/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
