@@ -12,3 +12,4 @@
 - Entity Framework Core
 - SQL Server
 - HTML/CSS/JavaScript (para a interface web)
+- Angular
