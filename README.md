@@ -8,3 +8,9 @@ Projeto de Banco Digital, utilizando uma API escrita em C#. Esta é uma simples 
 - [Isac Erik Tomaz](https://github.com/Izurus)
 - [Matheus Queiroz Barbosa Pinto](https://github.com/MatheusQueiroz1604)
 - [Lucas Ribeiro Moreira](https://github.com/LucasSanzio)
+
+## Tecnologias Utilizadas
+- ASP.NET Core (C#)
+- Entity Framework Core
+- SQL Server
+- HTML/CSS/JavaScript (para a interface web)
