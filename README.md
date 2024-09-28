@@ -1,4 +1,4 @@
-# Projeto QBank
+# QBank Project
 
 Nossa plataforma foi projetada com foco em aspectos críticos como interface do usuário, performance, escalabilidade, facilidade de uso e segurança na manipulação de dados. Essas preocupações são especialmente importantes conforme a aplicação cresce e manipula volumes maiores de informações.
 

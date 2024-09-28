@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QBank")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99ef552130c1aa75150e4e8432752fd79f1930ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+521ae94311798690f61e568534c69f7ef4b31d0a")]
 [assembly: System.Reflection.AssemblyProductAttribute("QBank")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QBank")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
