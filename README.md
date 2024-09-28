@@ -4,23 +4,23 @@ O QBank é um banco digital que oferece todas as funcionalidades de um banco tra
 
 Estamos constantemente trabalhando para implementar novas funções que atendam às necessidades modernas, tais como:
 
-Investimentos em criptomoedas, ações nacionais e internacionais
+- Investimentos em criptomoedas, ações nacionais e internacionais
 
-Armazenamento de moedas estrangeiras, como dólar e euro, além do real brasileiro
+- Armazenamento de moedas estrangeiras, como dólar e euro, além do real brasileiro
 
-Preocupações e Ferramentas:
+# Preocupações e Ferramentas:
 
 Nossa plataforma foi projetada tendo em mente partes críticas para a nossa aplicação, como a interface que irá interagir com o usuário, performance, escalabilidade e facilidade de uso. Além disso, priorizamos o desempenho e a segurança na manipulação de dados no banco de dados, especialmente ao longo do tempo, quando se começa a armazenar e manipular um volume crescente de informações.
 
 Para atender a essas necessidades, decidimos utilizar algumas tecnologias com características essenciais:
 
-ASP.NET Core: Performance e escalabilidade
+- ASP.NET Core: Performance e escalabilidade
 
-Entity Framework Core: Facilitação na integração com SQL Server, permitindo manipulação de dados segura e eficiente
+- Entity Framework Core: Facilitação na integração com SQL Server, permitindo manipulação de dados segura e eficiente
 
-SQL Server: Alta disponibilidade e desempenho
+- SQL Server: Alta disponibilidade e desempenho
 
-Angular: Utiliza HTML, CSS, JavaScript e JSON, permitindo a criação de aplicações de página única (SPA) que melhoram a experiência do usuário com navegação rápida e dinâmica
+- Angular: Utiliza HTML, CSS, JavaScript e JSON, permitindo a criação de aplicações de página única (SPA) que melhoram a experiência do usuário com navegação rápida e dinâmica
 
 ## Integrantes do Grupo
 - [Augusto Dias Moura Macedo](https://github.com/AugustoRalf)
