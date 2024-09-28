@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OZ0IHSvjZBo=",
+  "dgSpecHash": "PMuUcDm5fsg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\12315538\\QBank\\QBank.csproj",
+  "projectFilePath": "D:\\acervo\\C#\\QBank\\QBank.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\12315538\\QBank\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
