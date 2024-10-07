@@ -1,4 +1,5 @@
-namespace QBank.Models {
+namespace QBank.Models 
+{
     public class Authentication
     {
         public int Id { get; set; }
