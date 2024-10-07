@@ -31,21 +31,21 @@ CREATE TABLE Authentication_Table
 
 CREATE TABLE Credit_Card_Table
 (
-    cardId INT PRIMARY KEY,
+    creditCardId INT PRIMARY KEY,
     clientId INT NOT NULL,
     currentBill DECIMAL(10, 2) NOT NULL,
     approvalDate DATETIME NOT NULL,
     limit DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (clientId) REFERENCES User_Table(userId)
+    FOREIGN KEY (clientId) REFERENCES Account_Table(accountId)
 );
 
 CREATE TABLE Debit_Card_Table
 (
-    cardId INT PRIMARY KEY,
+    debitCardId INT PRIMARY KEY,
     clientId INT NOT NULL,
     availableBalance DECIMAL(10, 2) NOT NULL,
     approvalDate DATETIME NOT NULL,
-    FOREIGN KEY (clientId) REFERENCES User_Table(userId)
+    FOREIGN KEY (clientId) REFERENCES Account_Table(accountId)
 );
 
 CREATE TABLE Pix_Table
@@ -90,8 +90,8 @@ CREATE TABLE Transaction_Table
     loanDetailsId INT NULL,
     FOREIGN KEY (originAccountId) REFERENCES Account_Table(accountId),
     FOREIGN KEY (destinationAccountId) REFERENCES Account_Table(accountId),
-    FOREIGN KEY (debitCardDetailsId) REFERENCES Debit_Card_Table(cardId),
-    FOREIGN KEY (creditCardDetailsId) REFERENCES Credit_Card_Table(cardId),
+    FOREIGN KEY (debitCardDetailsId) REFERENCES Debit_Card_Table(debitCardId),
+    FOREIGN KEY (creditCardDetailsId) REFERENCES Credit_Card_Table(creditCardId),
     FOREIGN KEY (pixDetailsId) REFERENCES Pix_Table(pixId),
     FOREIGN KEY (boletoDetailsId) REFERENCES Bank_Slip_Table(bankSlipId),
     FOREIGN KEY (loanDetailsId) REFERENCES Loan_Table(loanId)
