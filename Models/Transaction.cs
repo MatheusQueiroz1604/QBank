@@ -15,7 +15,7 @@ namespace Qbank.Models
         public DebitCard? debitCardDetails { get; set; }
         public CreditCard? creditCardDetails { get; set; }
         public PIX? pixDetails { get; set; }
-        public BankSlip? boletoDetails { get; set; }
+        public BankSlip? bankSlipDetails { get; set; }
         public Loan? loanDetails { get; set; }
     }
 }

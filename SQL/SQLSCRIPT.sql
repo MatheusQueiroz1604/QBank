@@ -86,13 +86,13 @@ CREATE TABLE Transaction_Table
     debitCardDetailsId INT NULL,
     creditCardDetailsId INT NULL,
     pixDetailsId INT NULL,
-    boletoDetailsId INT NULL,
+    bankSlipDetailsId INT NULL,
     loanDetailsId INT NULL,
     FOREIGN KEY (originAccountId) REFERENCES Account_Table(accountId),
     FOREIGN KEY (destinationAccountId) REFERENCES Account_Table(accountId),
     FOREIGN KEY (debitCardDetailsId) REFERENCES Debit_Card_Table(debitCardId),
     FOREIGN KEY (creditCardDetailsId) REFERENCES Credit_Card_Table(creditCardId),
     FOREIGN KEY (pixDetailsId) REFERENCES Pix_Table(pixId),
-    FOREIGN KEY (boletoDetailsId) REFERENCES Bank_Slip_Table(bankSlipId),
+    FOREIGN KEY (bankSlipDetailsId) REFERENCES Bank_Slip_Table(bankSlipId),
     FOREIGN KEY (loanDetailsId) REFERENCES Loan_Table(loanId)
 );
