@@ -2,12 +2,12 @@ namespace QBank.Models
 {
     public class Loan
     {
-        public int EmprestimoId { get; set; }
-        public int ClienteId { get; set; }
-        public decimal Valor { get; set; }
-        public DateTime DataSolicitacao { get; set; }
-        public DateTime Prazo { get; set; }
-        public decimal? Juros { get; set; }
-        public int NumeroParcelas { get; set; }
-    }
+        public int loanId { get; set; }
+        public int clientId { get; set; }
+        public decimal amount { get; set; }
+        public DateTime requestDate { get; set; }
+        public DateTime deadline { get; set; }
+        public decimal? interestRate { get; set; }
+        public int? numberParcels { get; set; }
+    } 
 }

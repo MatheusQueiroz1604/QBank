@@ -2,11 +2,11 @@ namespace QBank.Models
 {
     public class Account
     {
-        public int id {get; set;}
-        public decimal? Saldo {get; set;}
-        public string NumeroConta { get; set; } = string.Empty;
-        public string TipoConta { get; set; } = string.Empty;
-        public DateTime DataAbertura { get; set; }
-        public int ClienteId { get; set; }
+        public int accountId { get; set; }
+        public decimal balance { get; set; } = 0.0m;
+        public string accountNumber { get; set; } = string.Empty;
+        public string accountType { get; set; } = string.Empty;
+        public DateTime openingDate { get; set; }
+        public int clientId { get; set; }
     }
 }

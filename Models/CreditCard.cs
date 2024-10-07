@@ -2,10 +2,10 @@ namespace QBank.Models
 {
     public class CreditCard
     {
-        public int CartaoId { get; set; }
-        public int ClienteId { get; set; }
-        public decimal FaturaAtual { get; set; }
-        public DateTime DataAprovacao { get; set; }
-        public decimal Limite { get; set; }
+        public int cardId { get; set; }
+        public int clientId { get; set; }
+        public decimal currentBill { get; set; }
+        public DateTime approvalDate { get; set; }
+        public decimal limit { get; set; }
     }
 }

@@ -1,13 +1,19 @@
 namespace Qbank.Models 
 {
-    public class User
+    public class Transaction
     {
-            public int Id { get; set; }
-            public string Nome {get; set;} = string.Empty;
-            public string CPF {get; set;} = string.Empty;
-            public string Email {get; set;} = string.Empty;
-            public string Senha {get; set;} = string.Empty;
-            public DateTime DataNascimento { get; set; }
-            public string Telefone { get; set; } = string.Empty;
+        public int transactionId { get; set; }
+        public string transactionType { get; set; } = string.Empty;
+        public decimal amount { get; set; }
+        public DateTime date { get; set; }
+        public int originAccountId { get; set; }
+        public int? destinationAccountId { get; set; }
+
+        // Propriedades específicas para cada tipo de transação
+        public DebitCard? debitCardDetails { get; set; }
+        public CreditCard? creditCardDetails { get; set; }
+        public PIX? pixDetails { get; set; }
+        public BankSlip? boletoDetails { get; set; }
+        public Loan? loanDetails { get; set; }
     }
 }

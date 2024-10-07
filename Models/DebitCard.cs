@@ -2,9 +2,9 @@ namespace QBank.Models
 {
     public class DebitCard
     {
-        public int CartaoId { get; set; }
-        public int ClienteId { get; set; }
-        public decimal SaldoDisponivel { get; set; }
-        public DateTime DataAprovacao { get; set; }
+        public int cardId { get; set; }
+        public int clientId { get; set; }
+        public decimal availableBalance { get; set; }
+        public DateTime approvalDate { get; set; }
     }
 }
