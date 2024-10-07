@@ -1,3 +1,5 @@
+using QBank.Models;
+
 namespace Qbank.Models 
 {
     public class Transaction
@@ -12,7 +14,7 @@ namespace Qbank.Models
         //Propriedades específicas para cada tipo de transação
         public DebitCard? DebitCardDetails { get; set; }
         public CreditCard? CreditCardDetails { get; set; }
-        public Pix? PixDetails { get; set; }
+        public PIX? PixDetails { get; set; }
         public Boleto? BoletoDetails { get; set; }
         public Loan? LoanDetails { get; set; }
     }
