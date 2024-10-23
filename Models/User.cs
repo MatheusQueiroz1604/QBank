@@ -1,4 +1,4 @@
-namespace Qbank.Models 
+namespace QBank.Models 
 {
     public class User
     {
