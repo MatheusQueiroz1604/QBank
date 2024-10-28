@@ -1,4 +1,4 @@
-CREATE TABLE User_Table
+CREATE TABLE Users
 (
     userId INT PRIMARY KEY,
     name VARCHAR(300) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE User_Table
     phone VARCHAR(20) NOT NULL
 );
 
-CREATE TABLE Account_Table
+CREATE TABLE Accounts
 (
     accountId INT PRIMARY KEY,
     balance DECIMAL(18, 2) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE Account_Table
     FOREIGN KEY (clientId) REFERENCES User_Table(userId)
 );
 
-CREATE TABLE Transaction_Table
+CREATE TABLE Transactions
 (
     transactionId INT PRIMARY KEY,
     transactionType VARCHAR(50) NOT NULL,
