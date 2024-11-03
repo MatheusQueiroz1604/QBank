@@ -49,7 +49,7 @@ namespace QBank.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         //Para funcionar, substitua o User Id e a Password com seu usuário no AppDbContext (aqui no caso) e no appsettings
-        optionsBuilder.UseSqlServer("Server=dbsqbank.database.windows.net;Database=QBank-DataBase;User Id=<seu_usuario>;Password=<sua_senha>;");
+        optionsBuilder.UseSqlServer("Server=dbsqbank.database.windows.net;Database=QBank-DataBase;User Id=Mat12315538;Password=Matheus12315538;");
     }
         
     }

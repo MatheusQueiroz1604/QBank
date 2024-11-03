@@ -1,21 +1,25 @@
 using Microsoft.EntityFrameworkCore;
 
 using QBank.Data;
-using QBank.DTOs;
-using QBank.Models;
+using QBank.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Adiciona o DbContext com a string de conexão
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//Registra os Serviços
+builder.Services.AddScoped<AccountService>();
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<TransactionService>();
+
+// Adiciona suporte para controllers
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
-AccountRoutes.MapAccountRoutes(app);
-TransactionRoutes.MapTransactionRoutes(app);
-UserRoutes.MapUserRoutes(app);
+app.MapControllers();
 
 app.Run();
