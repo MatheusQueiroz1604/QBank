@@ -1,74 +1,50 @@
 // Controllers/AccountController.cs
 using Microsoft.AspNetCore.Mvc;
-using QBank.Data;
 using QBank.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace QBank.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("/accounts")]
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly AccountService accountService;
 
-        public AccountController(AppDbContext context)
+        public AccountController(AccountService accountService)
         {
-            _context = context;
+            this.accountService = accountService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Account>>> GetAccounts()
         {
-            return await _context.Accounts.ToListAsync();
+            var accounts = await accountService.GetAllAccountsAsync();
+            return Ok(accounts);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Account>> GetAccount(int id)
         {
-            var account = await _context.Accounts.FindAsync(id);
-
+            var account = await accountService.GetAccountByIdAsync(id);
             if (account == null)
-            {
                 return NotFound();
-            }
 
-            return account;
+            return Ok(account);
         }
 
         [HttpPost]
         public async Task<ActionResult<Account>> PostAccount(Account account)
         {
-            _context.Accounts.Add(account);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetAccount), new { id = account.accountId }, account);
+            var createdAccount = await accountService.CreateAccountAsync(account);
+            return CreatedAtAction(nameof(GetAccount), new { id = createdAccount.accountId }, createdAccount);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAccount(int id, Account account)
         {
-            if (id != account.accountId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(account).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!_context.Accounts.Any(e => e.accountId == id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            var result = await accountService.UpdateAccountAsync(id, account);
+            if (!result)
+                return NotFound();
 
             return NoContent();
         }
@@ -76,14 +52,9 @@ namespace QBank.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAccount(int id)
         {
-            var account = await _context.Accounts.FindAsync(id);
-            if (account == null)
-            {
+            var result = await accountService.DeleteAccountAsync(id);
+            if (!result)
                 return NotFound();
-            }
-
-            _context.Accounts.Remove(account);
-            await _context.SaveChangesAsync();
 
             return NoContent();
         }
