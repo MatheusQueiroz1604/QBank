@@ -56,4 +56,16 @@ public class UserService
         await dbContext.SaveChangesAsync();
         return true;
     }
+
+    public User? ValidateUser(string email, string password)
+    {
+        var user = dbContext.Users.FirstOrDefault(u => u.email == email);
+
+        if (user != null && user.password == password)
+        {
+            return user;
+        }
+
+        return null;
+    }
 }

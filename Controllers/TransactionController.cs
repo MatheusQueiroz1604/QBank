@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using QBank.Models;
+using QBank.Filters;
 
 namespace QBank.Controllers
 {
     [Route("/transactions")]
     [ApiController]
+    [ServiceFilter(typeof(TokenAuthorizeFilter))]
     public class TransactionController : ControllerBase
     {
         private readonly TransactionService transactionService;

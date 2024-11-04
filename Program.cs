@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 using QBank.Data;
 using QBank.Services;
+using QBank.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,14 +14,19 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(buil
 builder.Services.AddScoped<AccountService>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<TransactionService>();
+builder.Services.AddScoped<AuthenticationService>();
+builder.Services.AddScoped<TokenAuthorizeFilter>();
 
-// Adiciona suporte para controllers
+// Adiciona suporte para controllers e filtros
 builder.Services.AddControllers();
+
 
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();

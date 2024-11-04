@@ -1,11 +1,13 @@
 // Controllers/AccountController.cs
 using Microsoft.AspNetCore.Mvc;
 using QBank.Models;
+using QBank.Filters;
 
 namespace QBank.Controllers
 {
     [Route("/accounts")]
     [ApiController]
+    [ServiceFilter(typeof(TokenAuthorizeFilter))]
     public class AccountController : ControllerBase
     {
         private readonly AccountService accountService;

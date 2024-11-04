@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using QBank.Models;
+using QBank.Filters;
 
 namespace QBank.Controllers
 {
@@ -15,6 +16,7 @@ namespace QBank.Controllers
         }
 
         [HttpGet]
+        [ServiceFilter(typeof(TokenAuthorizeFilter))]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             var users = await userService.GetAllUsersAsync();
@@ -39,6 +41,7 @@ namespace QBank.Controllers
         }
 
         [HttpPut("{id}")]
+        [ServiceFilter(typeof(TokenAuthorizeFilter))]
         public async Task<IActionResult> PutUser(int id, User user)
         {
             var result = await userService.UpdateUserAsync(id, user);
@@ -49,6 +52,7 @@ namespace QBank.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ServiceFilter(typeof(TokenAuthorizeFilter))]
         public async Task<IActionResult> DeleteUser(int id)
         {
             var result = await userService.DeleteUserAsync(id);
