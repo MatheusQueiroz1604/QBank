@@ -33,28 +33,28 @@ namespace QBank.Filters
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(token))
+            int clientId;
+
+            try
+            {
+                clientId = await _authenticationService.GetClientIdFromTokenAsync(token);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                context.Result = new UnauthorizedResult();
+                return;
+            }
+            catch (Exception)
             {
                 context.Result = new UnauthorizedResult();
                 return;
             }
 
-            try
-            {
-                // Aqui você pode validar o token e talvez expirar um token se necessário
-                var clientId = _authenticationService.GetClientIdFromTokenAsync(token).Result;
-
-                if (!_authenticationService.ValidateToken(clientId, token))
-                {
-                    context.Result = new UnauthorizedResult();
-                }
-            }
-            catch (UnauthorizedAccessException)
+            if (!_authenticationService.ValidateToken(clientId, token))
             {
                 context.Result = new UnauthorizedResult();
             }
         }  
-
         private int GetClientIdFromRequest(AuthorizationFilterContext context)
         {
             var claimsPrincipal = context.HttpContext.User;
