@@ -8,7 +8,7 @@ namespace QBank.Services {
     public class AuthenticationService
     {
         private readonly AppDbContext _dbContext;
-        private Dictionary<int, string> activeTokens = new Dictionary<int, string>();
+        private static Dictionary<int, string> activeTokens = new Dictionary<int, string>();
 
         public AuthenticationService(AppDbContext dbContext)
         {
