@@ -44,6 +44,22 @@ namespace QBank.Data
             .Property(t => t.interestRate)
             .HasColumnType("decimal(18, 4")
             .HasPrecision(18, 4);
+
+            modelBuilder.Entity<Transaction>()
+            .Property(t => t.transactionType)
+            .HasConversion<string>();
+
+            modelBuilder.Entity<Transaction>()
+            .Property(t => t.date)
+            .HasColumnType("datetime2");
+
+            modelBuilder.Entity<Transaction>()
+            .Property(t => t.dueDate)
+            .HasColumnType("datetime2");
+
+            modelBuilder.Entity<Transaction>()
+            .Property(t => t.approvalDate)
+            .HasColumnType("datetime2");
     }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

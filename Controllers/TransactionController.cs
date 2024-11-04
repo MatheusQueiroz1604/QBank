@@ -11,7 +11,7 @@ namespace QBank.Controllers
     {
         private readonly TransactionService transactionService;
 
-        private TransactionController (TransactionService transactionService)
+        public TransactionController (TransactionService transactionService)
         {
             this.transactionService = transactionService;
         }

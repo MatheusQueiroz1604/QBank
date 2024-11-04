@@ -49,7 +49,7 @@ namespace QBank.Migrations
 
                     b.HasKey("accountId");
 
-                    b.ToTable("Account");
+                    b.ToTable("Account", (string)null);
                 });
 
             modelBuilder.Entity("QBank.Models.Authentication", b =>
@@ -72,7 +72,7 @@ namespace QBank.Migrations
 
                     b.HasKey("authenticationId");
 
-                    b.ToTable("Authentication");
+                    b.ToTable("Authentication", (string)null);
                 });
 
             modelBuilder.Entity("QBank.Models.BankSlip", b =>
@@ -96,7 +96,7 @@ namespace QBank.Migrations
 
                     b.HasKey("bankSlipId");
 
-                    b.ToTable("BankSlip");
+                    b.ToTable("BankSlip", (string)null);
                 });
 
             modelBuilder.Entity("QBank.Models.CreditCard", b =>
@@ -121,7 +121,7 @@ namespace QBank.Migrations
 
                     b.HasKey("creditCardId");
 
-                    b.ToTable("CreditCard");
+                    b.ToTable("CreditCard", (string)null);
                 });
 
             modelBuilder.Entity("QBank.Models.DebitCard", b =>
@@ -143,7 +143,7 @@ namespace QBank.Migrations
 
                     b.HasKey("debitCardId");
 
-                    b.ToTable("DebitCard");
+                    b.ToTable("DebitCard", (string)null);
                 });
 
             modelBuilder.Entity("QBank.Models.Loan", b =>
@@ -174,7 +174,7 @@ namespace QBank.Migrations
 
                     b.HasKey("loanId");
 
-                    b.ToTable("Loan");
+                    b.ToTable("Loan", (string)null);
                 });
 
             modelBuilder.Entity("QBank.Models.PIX", b =>
@@ -195,7 +195,7 @@ namespace QBank.Migrations
 
                     b.HasKey("pixId");
 
-                    b.ToTable("PIX");
+                    b.ToTable("PIX", (string)null);
                 });
 
             modelBuilder.Entity("QBank.Models.Transaction", b =>
@@ -249,7 +249,7 @@ namespace QBank.Migrations
 
                     b.HasIndex("pixDetailspixId");
 
-                    b.ToTable("Transaction");
+                    b.ToTable("Transaction", (string)null);
                 });
 
             modelBuilder.Entity("QBank.Models.User", b =>
@@ -285,7 +285,7 @@ namespace QBank.Migrations
 
                     b.HasKey("userId");
 
-                    b.ToTable("User");
+                    b.ToTable("User", (string)null);
                 });
 
             modelBuilder.Entity("QBank.Models.Transaction", b =>

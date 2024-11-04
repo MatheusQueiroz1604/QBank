@@ -40,8 +40,6 @@ public class TransactionService
         transaction.pixKeyType = updatedTransaction.pixKeyType;
         transaction.interestRate = updatedTransaction.interestRate;
         transaction.numberParcels = updatedTransaction.numberParcels;
-        transaction.dueDate = updatedTransaction.dueDate;
-        transaction.approvalDate = updatedTransaction.approvalDate;
         transaction.destinationAccountId = updatedTransaction.destinationAccountId;
 
         await dbContext.SaveChangesAsync();
