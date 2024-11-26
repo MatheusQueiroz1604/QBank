@@ -20,10 +20,21 @@ builder.Services.AddScoped<TokenAuthorizeFilter>();
 // Adiciona suporte para controllers e filtros
 builder.Services.AddControllers();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
+
+app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();
